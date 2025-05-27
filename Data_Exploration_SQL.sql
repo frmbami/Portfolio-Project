@@ -96,6 +96,7 @@ from payments
 group by customerNumber)t1
 )t2
 on c.customerNumber=t2.customerNumber;
+
 -- identify frequently co-purcharsed product to understand cross-selling opportunity 
 select od.productCode,p.productName,o.productCode,p2.productName,count(*) as Purchased_together
  from orderdetails od
